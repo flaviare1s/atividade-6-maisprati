@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sticker Coração",
+      "description": "Sticker em formato de coração.",
+      "price": 25.99,
+      "rating": 5,
+      "status": "novo"
+    },
+    {
+      "id": 2,
+      "name": "Sticker Lua",
+      "description": "Noise-cancelling over-ear headphones with Bluetooth connectivity.",
+      "price": 25.99,
+      "rating": 5,
+      "status": "novo"
+    },
+    {
+      "id": 3,
+      "name": "Sticker Sol",
+      "description": "",
+      "price": 25.99,
+      "rating": 5,
+      "status": "promo"
+    },
+    {
+      "id": 4,
+      "name": "Sticker Estrela",
+      "description": "",
+      "price": 25.99,
+      "rating": 5,
+      "status": "novo"
+    },
+    {
+      "id": 5,
+      "name": "Sticker Nuvem",
+      "description": "",
+      "price": 25.99,
+      "rating": 5,
+      "status": "promo"
+    }
+  ]
+}

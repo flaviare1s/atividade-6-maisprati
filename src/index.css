@@ -1,1 +1,77 @@
 @import "tailwindcss";
+
+:root {
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-teal-primary: #0d9488;
+  --color-teal-secondary: #14b8a6;
+  --color-teal-light: #f0fdfa;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --color-background: #111827;
+  --color-surface: #1f2937;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-border: #374151;
+  --color-teal-primary: #14b8a6;
+  --color-teal-secondary: #0d9488;
+  --color-teal-light: #064e3b;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.bg-theme-background {
+  background-color: var(--color-background);
+}
+
+.bg-theme-surface {
+  background-color: var(--color-surface);
+}
+
+.text-theme-primary {
+  color: var(--color-text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--color-text-secondary);
+}
+
+.border-theme {
+  border-color: var(--color-border);
+}
+
+.text-theme-teal {
+  color: var(--color-teal-primary);
+}
+
+.bg-theme-teal {
+  background-color: var(--color-teal-primary);
+}
+
+.hover\:bg-theme-teal-light:hover {
+  background-color: var(--color-teal-light);
+}
+
+* {
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: 2px;
+}
