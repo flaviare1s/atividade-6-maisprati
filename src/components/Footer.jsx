@@ -105,7 +105,7 @@ export const Footer = () => {
             <FooterLink href="/produtos/material">Material UI</FooterLink>
           </FooterText>
           <FooterText>
-            <FooterLink href="/produtos/miligram">Miligram</FooterLink>
+            <FooterLink href="/produtos/milligram">Milligram</FooterLink>
           </FooterText>
         </FooterSection>
 

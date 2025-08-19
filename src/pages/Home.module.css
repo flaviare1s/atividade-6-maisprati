@@ -146,15 +146,15 @@
   color: var(--color-teal-primary);
 }
 
-.miligram {
+.milligram {
   border-left: 4px solid #9b4dca;
 }
 
-.miligram:hover {
+.milligram:hover {
   border-color: #9b4dca;
 }
 
-.miligram .cardIcon {
+.milligram .cardIcon {
   color: #9b4dca;
 }
 

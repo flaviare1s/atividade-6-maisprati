@@ -15,10 +15,10 @@ const libraries = [
     className: 'material'
   },
   {
-    name: 'Miligram',
-    path: '/produtos/miligram',
-    description: 'Explore os produtos da categoria Miligram e conheça esse framework CSS minimalista que fornece uma base limpa e rápida para seus projetos.',
-    className: 'miligram'
+    name: 'Milligram',
+    path: '/produtos/milligram',
+    description: 'Explore os produtos da categoria Milligram e conheça esse framework CSS minimalista que fornece uma base limpa e rápida para seus projetos.',
+    className: 'milligram'
   }
 ];
 

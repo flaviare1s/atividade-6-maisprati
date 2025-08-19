@@ -89,7 +89,7 @@ const Header = ({ cartCount = 0 }) => {
             </li>
             <li>
               <NavLink
-                to="/produtos/miligram"
+                to="/produtos/milligram"
                 className={({ isActive }) =>
                   `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'
                   }`
@@ -97,7 +97,7 @@ const Header = ({ cartCount = 0 }) => {
                 role="menuitem"
                 onClick={() => setDropdownOpen(false)}
               >
-                Miligram
+                Milligram
               </NavLink>
             </li>
           </ul>

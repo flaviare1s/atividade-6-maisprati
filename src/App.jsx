@@ -4,8 +4,8 @@ import { RootLayout } from "./layouts/RootLayout";
 import { Home } from "./pages/Home";
 import { Bootstrap } from "./pages/Bootstrap";
 import { Material } from "./pages/Material";
-import { Miligram } from "./pages/Miligram";
 import { About } from "./pages/About";
+import { Milligram } from "./pages/Milligram";
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
           <Route path="sobre" element={<About />} />
           <Route path="produtos/bootstrap" element={<Bootstrap />} />
           <Route path="produtos/material" element={<Material />} />
-          <Route path="produtos/miligram" element={<Miligram />} />
+          <Route path="produtos/milligram" element={<Milligram />} />
         </Route>
       </Routes>
     </ThemeProvider>
