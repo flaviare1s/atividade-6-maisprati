@@ -59,7 +59,7 @@ export const Milligram = () => {
       <div className={styles.milligram}>
         <div className={styles.container} style={{ paddingTop: '8rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h1>Loading...</h1>
+            <h2>Loading...</h2>
             <p>Carregando produtos...</p>
           </div>
 

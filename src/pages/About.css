@@ -1,0 +1,44 @@
+.about-container {
+  padding: 2rem;
+  margin-top: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  min-height: calc(100vh - 60px);
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #14B8A6;
+}
+
+.about-container h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #7952b3;
+}
+
+.about-container p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.2rem;
+  }
+}
