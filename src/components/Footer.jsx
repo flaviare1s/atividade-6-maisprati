@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useTheme } from '../contexts/ThemeContext';
+import Logo from './Logo';
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -34,6 +35,12 @@ const FooterSection = styled.div`
   @media (min-width: 768px) {
     align-items: flex-start;
   }
+`;
+
+const FooterLogo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const FooterTitle = styled.h3`
@@ -87,7 +94,10 @@ export const Footer = () => {
     <StyledFooter $isDark={isDark}>
       <FooterContainer>
         <FooterSection>
-          <FooterTitle $isDark={isDark}>🖼️ StyledStore</FooterTitle>
+          <FooterLogo>
+            <Logo size={24} />
+            <FooterTitle $isDark={isDark}> StyledStore</FooterTitle>
+          </FooterLogo>
           <FooterText>
             <StyledText>Explore nossos produtos</StyledText>
           </FooterText>

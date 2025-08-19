@@ -2,6 +2,7 @@ import { ShoppingCart } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
+import Logo from './Logo';
 
 const Header = ({ cartCount = 0 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header = ({ cartCount = 0 }) => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal' : 'text-theme-secondary hover:text-theme-teal'
+          `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal font-bold' : 'text-theme-secondary hover:text-theme-teal font-semibold'
           }`
         }
       >
@@ -41,7 +42,7 @@ const Header = ({ cartCount = 0 }) => {
       <NavLink
         to="/sobre"
         className={({ isActive }) =>
-          `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal' : 'text-theme-secondary hover:text-theme-teal'
+          `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal font-bold' : 'text-theme-secondary hover:text-theme-teal font-semibold'
           }`
         }
       >
@@ -49,7 +50,7 @@ const Header = ({ cartCount = 0 }) => {
       </NavLink>
       <div className="relative" ref={dropdownRef}>
         <button
-          className="text-theme-secondary hover:text-theme-teal transition-colors duration-200 cursor-pointer"
+          className="text-theme-secondary font-semibold hover:text-theme-teal transition-colors duration-200 cursor-pointer"
           onClick={() => setDropdownOpen((open) => !open)}
           aria-haspopup="true"
           aria-expanded={dropdownOpen}
@@ -111,9 +112,10 @@ const Header = ({ cartCount = 0 }) => {
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link
           to="/"
-          className="font-bold text-xl text-theme-teal hover:text-theme-teal transition-colors duration-200 no-underline"
+          className="font-bold text-xl text-theme-teal hover:text-theme-teal transition-colors duration-200 no-underline flex items-center gap-2"
         >
-          🖼️StyledStore
+          <Logo size={28} />
+          StyledStore
         </Link>
         <div className="hidden sm:flex items-center gap-6">
           {navLinks}
@@ -133,7 +135,7 @@ const Header = ({ cartCount = 0 }) => {
           <ThemeToggle />
           <button
             aria-label="Carrinho"
-            className="p-2 rounded-lg text-theme-teal hover:bg-theme-teal-light focus:outline-none focus:ring-2 focus:ring-theme-teal transition-colors duration-200 cursor-pointer rounded"
+            className="p-2 rounded-lg text-theme-teal hover:bg-theme-teal-light focus:outline-none focus:ring-2 focus:ring-theme-teal transition-colors duration-200 cursor-pointer"
           >
             <ShoppingCart className="w-5 h-5" />
           </button>
