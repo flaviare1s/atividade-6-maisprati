@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Sticker Coração",
-      "description": "Sticker em formato de coração.",
+      "description": "Adesivo decorativo em formato de coração perfeito para personalizar notebooks, celulares e objetos pessoais.",
       "price": 25.99,
       "rating": 5,
       "status": "novo"
@@ -11,34 +11,66 @@
     {
       "id": 2,
       "name": "Sticker Lua",
-      "description": "Noise-cancelling over-ear headphones with Bluetooth connectivity.",
-      "price": 25.99,
+      "description": "Sticker elegante em formato de lua crescente, ideal para criar uma atmosfera mística e romântica.",
+      "price": 22.99,
       "rating": 5,
       "status": "novo"
     },
     {
       "id": 3,
       "name": "Sticker Sol",
-      "description": "",
-      "price": 25.99,
+      "description": "Adesivo vibrante em formato de sol radiante, perfeito para adicionar energia e positividade ao seu dia.",
+      "price": 28.99,
       "rating": 5,
       "status": "promo"
     },
     {
       "id": 4,
       "name": "Sticker Estrela",
-      "description": "",
-      "price": 25.99,
-      "rating": 5,
+      "description": "Sticker brilhante em formato de estrela que adiciona um toque mágico a qualquer superfície.",
+      "price": 24.99,
+      "rating": 4,
       "status": "novo"
     },
     {
       "id": 5,
       "name": "Sticker Nuvem",
-      "description": "",
-      "price": 25.99,
+      "description": "Adesivo fofo em formato de nuvem, ideal para criar uma decoração suave e relaxante.",
+      "price": 26.99,
       "rating": 5,
       "status": "promo"
+    },
+    {
+      "id": 6,
+      "name": "Sticker Raio",
+      "description": "Sticker dinâmico em formato de raio que transmite energia e poder instantâneo.",
+      "price": 29.99,
+      "rating": 4,
+      "status": "novo"
+    },
+    {
+      "id": 7,
+      "name": "Sticker Folha",
+      "description": "Adesivo natural em formato de folha, perfeito para amantes da natureza e decoração ecológica.",
+      "price": 23.99,
+      "rating": 5,
+      "status": "promo"
+    },
+    {
+      "id": 8,
+      "name": "Sticker Gota",
+      "description": "Sticker minimalista em formato de gota d'água, ideal para uma decoração clean e moderna.",
+      "price": 21.99,
+      "rating": 4,
+      "status": "novo"
+    },
+    {
+      "id": 9,
+      "name": "Sticker Diamante",
+      "description": "Adesivo luxuoso em formato de diamante que adiciona glamour e sofisticação a qualquer objeto.",
+      "price": 34.99,
+      "rating": 3,
+      "status": "novo"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { RootLayout } from "./layouts/RootLayout";
+import { Home } from "./pages/Home";
 import { Bootstrap } from "./pages/Bootstrap";
 import { Material } from "./pages/Material";
 import { Miligram } from "./pages/Miligram";
@@ -11,11 +12,13 @@ function App() {
   return (
     <ThemeProvider>
       <Routes>
-        <Route path="/" element={<RootLayout />} />
-        <Route path="/sobre" element={<About />} />
-        <Route path="/bootstrap" element={<Bootstrap />} />
-        <Route path="/material" element={<Material />} />
-        <Route path="/miligram" element={<Miligram />} />
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<Home />} />
+          <Route path="sobre" element={<About />} />
+          <Route path="produtos/bootstrap" element={<Bootstrap />} />
+          <Route path="produtos/material" element={<Material />} />
+          <Route path="produtos/miligram" element={<Miligram />} />
+        </Route>
       </Routes>
     </ThemeProvider>
   )
