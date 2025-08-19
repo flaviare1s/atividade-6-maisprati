@@ -8,11 +8,15 @@ const Header = ({ cartCount = 0 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdownOpen(false);
+      }
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setMobileOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -28,27 +32,31 @@ const Header = ({ cartCount = 0 }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, [mobileOpen]);
 
-  const navLinks = (
-    <>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal font-bold' : 'text-theme-secondary hover:text-theme-teal font-semibold'
-          }`
-        }
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/sobre"
-        className={({ isActive }) =>
-          `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal font-bold' : 'text-theme-secondary hover:text-theme-teal font-semibold'
-          }`
-        }
-      >
-        Sobre
-      </NavLink>
-      <div className="relative" ref={dropdownRef}>
+  const handleNavMobile = () => setMobileOpen(false);
+
+  const navLinks = [
+    <NavLink
+      key="home"
+      to="/"
+      className={({ isActive }) =>
+        `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal font-bold' : 'text-theme-secondary hover:text-theme-teal font-semibold'}`
+      }
+      onClick={handleNavMobile}
+    >
+      Home
+    </NavLink>,
+    <NavLink
+      key="sobre"
+      to="/sobre"
+      className={({ isActive }) =>
+        `transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal font-bold' : 'text-theme-secondary hover:text-theme-teal font-semibold'}`
+      }
+      onClick={handleNavMobile}
+    >
+      Sobre
+    </NavLink>,
+    (
+      <div key="produtos" className="relative" ref={dropdownRef}>
         <button
           className="text-theme-secondary font-semibold hover:text-theme-teal transition-colors duration-200 cursor-pointer"
           onClick={() => setDropdownOpen((open) => !open)}
@@ -66,11 +74,10 @@ const Header = ({ cartCount = 0 }) => {
               <NavLink
                 to="/produtos/bootstrap"
                 className={({ isActive }) =>
-                  `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'
-                  }`
+                  `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'}`
                 }
                 role="menuitem"
-                onClick={() => setDropdownOpen(false)}
+                onClick={() => { setDropdownOpen(false); handleNavMobile(); }}
               >
                 Bootstrap
               </NavLink>
@@ -79,11 +86,10 @@ const Header = ({ cartCount = 0 }) => {
               <NavLink
                 to="/produtos/material"
                 className={({ isActive }) =>
-                  `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'
-                  }`
+                  `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'}`
                 }
                 role="menuitem"
-                onClick={() => setDropdownOpen(false)}
+                onClick={() => { setDropdownOpen(false); handleNavMobile(); }}
               >
                 Material UI
               </NavLink>
@@ -92,11 +98,10 @@ const Header = ({ cartCount = 0 }) => {
               <NavLink
                 to="/produtos/milligram"
                 className={({ isActive }) =>
-                  `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'
-                  }`
+                  `block px-4 py-2 focus:bg-theme-teal-light focus:outline-none transition-colors duration-200 no-underline ${isActive ? 'text-theme-teal bg-theme-teal-light' : 'text-theme-secondary hover:bg-theme-teal-light'}`
                 }
                 role="menuitem"
-                onClick={() => setDropdownOpen(false)}
+                onClick={() => { setDropdownOpen(false); handleNavMobile(); }}
               >
                 Milligram
               </NavLink>
@@ -104,8 +109,8 @@ const Header = ({ cartCount = 0 }) => {
           </ul>
         )}
       </div>
-    </>
-  );
+    )
+  ];
 
   return (
     <header className="bg-theme-background shadow-md fixed top-0 left-0 w-full z-50 transition-colors duration-200">
@@ -147,7 +152,7 @@ const Header = ({ cartCount = 0 }) => {
         </div>
       </nav>
       {mobileOpen && (
-        <div className="sm:hidden bg-theme-background border-t border-theme px-6 py-4 flex flex-col gap-4 shadow-lg cursor-pointer">
+        <div ref={mobileMenuRef} className="sm:hidden bg-theme-background border-t border-theme px-6 py-4 flex flex-col gap-4 shadow-lg cursor-pointer">
           {navLinks}
         </div>
       )}
